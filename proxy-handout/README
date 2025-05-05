@@ -1,0 +1,27 @@
+****************
+CS:APP Proxy Lab
+****************
+
+Makefile	- For building proxy
+README		- This file
+
+# Proxy source files
+proxy.{c,h}	- Primary proxy code
+csapp.{c,h}	- Wrapper and helper functions from the CS:APP text
+
+# How to run
+To run this proxy first the user must call "make" to create the executable files
+
+Next make sure that the port you want to run the proxy is the same port you are using on your browser
+
+In my case I was able to use Firefox and I altered the network settings
+In there click on use "manual proxy configuration" HTTP proxy
+Then for HTTP proxy use localhost and the PORT should be what your first argument will be when you run the proxy
+In my case I just used 8080
+
+Then once that's set up go to the terminal and run "./proxy <PORT number>" or example "./proxy 8080"
+In the console you will be able to see the requested URI when running HTTP links in firefox
+In Firefox you should be able to see your requested HTTP link
+You will be able to keep running websites unless a socket error occurs
+
+Finally you should be able to see all the requested HTTPs in the proxy.log, since it automatically appends in it after a request
